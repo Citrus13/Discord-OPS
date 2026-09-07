@@ -1,0 +1,50 @@
+# Signature: server_config.example.yaml - Discord サーバー構成定義サンプル
+version: "1.0"
+guild_id: 123456789012345678
+
+settings:
+  archive_category_name: "[Archive] 削除予定"
+  protected_roles: ["@everyone", "Bot Admin"]
+  protected_channels: ["rules", "announcements"]
+
+server_settings:
+  default_message_notifications: "only_mentions"
+  afk_channel: null
+  afk_timeout: 900
+  system_channel: null
+
+roles:
+  - name: "Admin"
+    color: "#E74C3C"
+    hoist: true
+    mentionable: true
+  - name: "Moderator"
+    color: "#3498DB"
+    hoist: true
+    mentionable: true
+  - name: "Member"
+    color: "#2ECC71"
+    hoist: false
+    mentionable: false
+
+categories:
+  - name: "📢 インフォメーション"
+    permissions:
+      "@everyone": { view_channel: allow, send_messages: deny }
+      "Admin": { view_channel: allow, send_messages: allow }
+    channels:
+      - name: "rules"
+        topic: "サーバー規約"
+      - name: "announcements"
+        topic: "全体お知らせ"
+
+  - name: "💬 コミュニティ"
+    permissions:
+      "@everyone": { view_channel: deny }
+      "Member": { view_channel: allow, send_messages: allow }
+      "Admin": { view_channel: allow, send_messages: allow }
+    channels:
+      - name: "general"
+        topic: "雑談チャンネル"
+      - name: "voice-room"
+        type: "voice"

@@ -1,0 +1,3 @@
+discord_user_id,manage_number,display_name,assign_roles,nickname_format
+123456789012345678,M0001,サンプルユーザーA,Admin,[{manage_number}] {display_name}
+234567890123456789,M0002,サンプルユーザーB,"メンバー,広報",[{manage_number}] {display_name}

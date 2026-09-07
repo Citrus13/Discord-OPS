@@ -1,0 +1,77 @@
+# File: .gitignore - Git 除外設定
+
+# ==========================================
+# 1. 秘密情報・環境変数 (絶対にコミット禁止)
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ==========================================
+# 2. 実データ・機密設定ファイル
+# ==========================================
+# メンバー名簿の実データ
+config/members.csv
+!config/members.example.csv
+
+# 実際のサーバー構成定義 (サンプルファイルのみ管理)
+config/server_config.yaml
+!config/server_config.example.yaml
+
+# サーバー現況レポート
+server_status_report.md
+
+# 実行監査ログ・バックアップスナップショット
+logs/
+snapshots/
+
+# 作業・検証用スクリプト群
+scratch/
+apply_fortress.py
+clean_and_reorder.py
+cli.py
+discord_manager.py
+reorder_only.py
+restore_all_channels.py
+
+# ==========================================
+# 3. Python 実行環境・キャッシュ
+# ==========================================
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================================
+# 4. エディタ・OS 一時ファイル
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
