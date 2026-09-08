@@ -125,6 +125,5 @@ assets/emojis/ ディレクトリ内の画像ファイルを絵文字として�
 
 ---
 
-## 4. Git コミット・セキュリティに関する注意
+## 4. セキュリティに関する事項
 - `.env`、`config/members.csv`、`config/server_config.yaml`、`logs/`、`snapshots/` は機密情報保護のため `.gitignore` によりコミット対象外となっています。
-- ツールを共有・公開する際は、`.env.example` や `config/server_config.example.yaml`、`config/members.example.csv` のサンプルファイルをご利用ください。
